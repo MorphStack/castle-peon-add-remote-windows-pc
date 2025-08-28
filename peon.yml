@@ -1,0 +1,23 @@
+version: '1.0.0'
+name: 'Add Remote Windows PC'
+description: 'Add a remote Windows PC to CastleOS'
+author: 'MorphStack'
+scriptType: 'powershell'
+tags: ['castleops', 'windows', 'remote', 'pc', 'add']
+gitUrl: 'https://github.com/MorphStack/castle-peon-add-remote-windows-pc'
+entryPoint: 'src/Add-RemotePC.ps1'
+inputs: [
+  {
+    id: 'REMOTE_ADMIN_USERNAME'
+    type: 'textBox'
+    description: 'The name of the remote admin user'
+    default: 'CastleOpsWinRm'
+    required: true
+  },
+  {
+    id: 'REMOTE_ADMIN_PASSWORD'
+    type: 'password'
+    description: 'The password of the remote admin user'
+    required: true
+  }
+]
